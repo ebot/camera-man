@@ -10,7 +10,7 @@ Setup
 
 1. ssh into your raspberry pu
 2. Install [nvm](https://github.com/creationix/nvm)
-3. Install the latest node: nvm install 0.10
+3. Install the latest node: nvm install 0.10.28
 4. Set it as the default: nvm alias default 0.10
 5. Install forever: npm install forever -g
 6. Clone this repo
