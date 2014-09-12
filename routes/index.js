@@ -5,7 +5,7 @@ var exec = require('child_process').exec;
 
 /* Take picture and load home page */
 router.get('/', function(req, res) {
-  exec('raspistill -o public/images/fuel.jpg', function(error, stdout, stderr) {
+  exec('raspistill -vf -hf -o public/images/fuel.jpg', function(error, stdout, stderr) {
     console.log('stdout: ' + stdout);
     console.log('stderr: ' + stderr);
     if (error !== null) {
