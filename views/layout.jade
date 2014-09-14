@@ -2,6 +2,27 @@ doctype html
 html
   head
     title= title
+    meta( name='viewport' content='width=device-width, initial-scale=1' )
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap-theme.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    link( rel='shortcut icon' type='image/png'
+    href='/images/favicon-196.png' )
+    link( rel='shortcut icon' type='image/png'
+    href='/images/favicon-32.png' sizes ='32x32' )
+    link( rel='shortcut icon' type='image/png'
+    href='/images/favicon-16.png' sizes ='16x16' )
+    link( rel='apple-touch-icon' type='image/png' href='/images/favicon-196.png' )
+  body( role='document' )
+    div( class='navbar navbar-inverse navbar-fixed-top' role='navigation' )
+      div( class='container' )
+        div( class='navbar-header' )
+          a( class='navbar-brand' href='#') Camera Man
+    div( class='container theme-showcase' role='main' )
+      div( class='jumbotron' )
+        p Saving you the trouble of going into the crawl space!
+      div
+        block content
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+
