@@ -10,16 +10,20 @@ body {
 }
 
 .theme-showcase > p > .btn {
-  margin: 5px 0;
+  margin: 2px 0;
 }
 
 .theme-showcase .navbar .container {
   width: auto;
 }
 
+.jumbotron {
+  padding: 22px 10px 10px 10px;
+}
+
 #last_pic img {
-  width: 200px;
-  height: 253px;
+  width: 250px;
+  height: 316px;
 }
 
 @media (min-width: 768px) {
