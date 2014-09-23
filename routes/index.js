@@ -5,6 +5,14 @@ var exec = require('child_process').exec;
 
 /* Take picture and load home page */
 router.get('/', function(req, res) {
+  exec('sudo python led_on.py', function(error, stdout, stderr) {
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+    if (error !== null) {
+      console.log('exec error: ' + error);
+    }
+    res.render('index', { title: 'Camera Man' })
+  });
   exec('raspistill -h 500 -w 500 -vf -hf -o public/images/fuel.jpg', function(error, stdout, stderr) {
     console.log('stdout: ' + stdout);
     console.log('stderr: ' + stderr);
