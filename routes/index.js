@@ -10,16 +10,22 @@ router.get('/', function(req, res) {
     console.log('stderr: ' + stderr);
     if (error !== null) {
       console.log('exec error: ' + error);
+      res.render('error', { title: 'Camera Error', message: 'Failed to Take Picture', error: error })
     }
-    res.render('index', { title: 'Camera Man' })
+    else {
+      res.render('index', { title: 'Camera Man' })
+    }
   });
   exec('raspistill -h 500 -w 500 -vf -hf -o public/images/fuel.jpg', function(error, stdout, stderr) {
     console.log('stdout: ' + stdout);
     console.log('stderr: ' + stderr);
     if (error !== null) {
       console.log('exec error: ' + error);
+      res.render('error', { title: 'Camera Error', message: 'Failed to Take Picture', error: error })
     }
-    res.render('index', { title: 'Camera Man' })
+    else {
+      res.render('index', { title: 'Camera Man' })
+    }
   });
 });
 
